@@ -25,7 +25,7 @@ export class TodoComponent {
 
   markComplete(item: string) {
     this.completedItems.push(item);
-    this.deleteItem(item);
+    this.incompleteItems = this.incompleteItems.filter(i => i !== item);
   }
 
   setTab(tab: string) {
