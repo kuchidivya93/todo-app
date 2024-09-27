@@ -1,0 +1,67 @@
+.container {
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .input-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  input[type="text"] {
+    width: 70%;
+    padding: 5px;
+  }
+  
+  button {
+    padding: 5px 10px;
+    background-color: #5995da;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .todo-section {
+    border-top: 1px solid #ccc;
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+  }
+  
+  button.active {
+    font-weight: bold;
+    color: #5995da;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  li input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  button {
+    background-color: #5995da;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #407bbf;
+  }
+  

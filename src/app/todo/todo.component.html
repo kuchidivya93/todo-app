@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="input-section">
+      <input type="text" placeholder="To do item..." [(ngModel)]="newItem" />
+      <button (click)="addItem()">Add It...</button>
+    </div>
+  
+    <div class="todo-section">
+      <div class="tabs">
+        <button [class.active]="activeTab === 'incomplete'" (click)="setTab('incomplete')">Incomplete Items...</button>
+        <button [class.active]="activeTab === 'complete'" (click)="setTab('complete')">Completed Items...</button>
+      </div>
+  
+      <div *ngIf="activeTab === 'incomplete'">
+        <ul>
+          <li *ngFor="let item of incompleteItems">
+            <input type="checkbox" (click)="markComplete(item)" />
+            {{ item }}
+            <button (click)="deleteItem(item)">Delete</button>
+          </li>
+        </ul>
+      </div>
+  
+      <div *ngIf="activeTab === 'complete'">
+        <ul>
+          <li *ngFor="let item of completedItems">
+            {{ item }}
+            <button (click)="deleteItem(item)">Delete</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>  
